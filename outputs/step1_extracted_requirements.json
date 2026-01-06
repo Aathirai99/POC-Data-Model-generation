@@ -1,0 +1,485 @@
+{
+  "extraction_date": "2025-12-22T14:03:13.856832",
+  "total_requirements": 45,
+  "source_file": "USF Requirements Document - Phase 0B.xlsx",
+  "functional_requirements": [
+    {
+      "fr_number": "FR1",
+      "description": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEvy-uiRo/edit?usp=sharing. Eventually solution shall provide ability to eliminate the use of ODS. (The reports specified in the fie are generated from the source systems: workday, slate, sfaq, banner.)",
+      "comments": "Tableau reports: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEvy-uiRo/edit?usp=sharing\n\nAre these the six reports: (Hilltop Undergraduate Deposits (Live) - Fall 2022.twb,  Course Assignments by Faculty Type.twbx, Workday Academic Appointment Audit.twbx, CAS Admissions Trends - Summer and Fall.twbx, Prospect and Inquiry Transfer 3 Y to Y Gender, Geomarket, Ethnicity, Major.twbx, SLATE Payments Vs. TBRDEPO Posting.twb)",
+      "combined_text": "solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1eyi07gsrc4hw9_pwxiggvxpow7irkazw5qeevy-uiro/edit?usp=sharing. eventually solution shall provide ability to eliminate the use of ods. (the reports specified in the fie are generated from the source systems: workday, slate, sfaq, banner.) tableau reports: https://docs.google.com/spreadsheets/d/1eyi07gsrc4hw9_pwxiggvxpow7irkazw5qeevy-uiro/edit?usp=sharing\n\nare these the six reports: (hilltop undergraduate deposits (live) - fall 2022.twb,  course assignments by faculty type.twbx, workday academic appointment audit.twbx, cas admissions trends - summer and fall.twbx, prospect and inquiry transfer 3 y to y gender, geomarket, ethnicity, major.twbx, slate payments vs. tbrdepo posting.twb)"
+    },
+    {
+      "fr_number": "FR2",
+      "description": "Solution shall have ability to establish relationships between tables and sources involved per the joins present in the six current reports. Current reports file link: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEvy-uiRo/edit?usp=sharing",
+      "comments": "",
+      "combined_text": "solution shall have ability to establish relationships between tables and sources involved per the joins present in the six current reports. current reports file link: https://docs.google.com/spreadsheets/d/1eyi07gsrc4hw9_pwxiggvxpow7irkazw5qeevy-uiro/edit?usp=sharing "
+    },
+    {
+      "fr_number": "FR3",
+      "description": "Solution shall implement cost effective, centralized standardization approach that standardizes addresses to an uniform format.",
+      "comments": "Solution will leverage USF standardized address being sent from source systems.",
+      "combined_text": "solution shall implement cost effective, centralized standardization approach that standardizes addresses to an uniform format. solution will leverage usf standardized address being sent from source systems."
+    },
+    {
+      "fr_number": "FR4",
+      "description": "Solution shall implement cost effective, centralized standardization approach that standardizes phone numbers to an uniform format.",
+      "comments": "Solution will leverage USF standardized phone being sent from source systems.",
+      "combined_text": "solution shall implement cost effective, centralized standardization approach that standardizes phone numbers to an uniform format. solution will leverage usf standardized phone being sent from source systems."
+    },
+    {
+      "fr_number": "FR5",
+      "description": "Solution shall have ability to wait for the completion of integration jobs that update the data prior pulling them out from source systems.",
+      "comments": "",
+      "combined_text": "solution shall have ability to wait for the completion of integration jobs that update the data prior pulling them out from source systems. "
+    },
+    {
+      "fr_number": "FR6",
+      "description": "Solution shall have ability to source banner data along with its relationships among objects. This data will be leveraged for reporting per need.",
+      "comments": "",
+      "combined_text": "solution shall have ability to source banner data along with its relationships among objects. this data will be leveraged for reporting per need. "
+    },
+    {
+      "fr_number": "FR7",
+      "description": "Solution shall have the ability to pull all Banner data through relevant connection mechanism. The connection mechanism can be either JDBC, JDBC vis ADF and/or Ethos API etc.,",
+      "comments": "8/10: current method is JDBC and we wanted them to stick to it. It can support Ethos API down the road, yet our current method we tested is JDBC via ADF.",
+      "combined_text": "solution shall have the ability to pull all banner data through relevant connection mechanism. the connection mechanism can be either jdbc, jdbc vis adf and/or ethos api etc., 8/10: current method is jdbc and we wanted them to stick to it. it can support ethos api down the road, yet our current method we tested is jdbc via adf."
+    },
+    {
+      "fr_number": "FR8",
+      "description": "Solution shall have the ability to pull all workday data through SOAP API.",
+      "comments": "",
+      "combined_text": "solution shall have the ability to pull all workday data through soap api. "
+    },
+    {
+      "fr_number": "FR9",
+      "description": "Solution shall have ability to source Salesforce AffinaQuest data along with its relationships among objects.",
+      "comments": "",
+      "combined_text": "solution shall have ability to source salesforce affinaquest data along with its relationships among objects. "
+    },
+    {
+      "fr_number": "FR10",
+      "description": "Solution shall replicate and eventually replace current Slate integration into ODS for reporting needs. (Slate - transactional+customer+Nmcustomer) with Snowflake/Azure pipeline. The integration from Slate as a system will not send any data to MDM.",
+      "comments": "SEM - Admissions is the group that runs reports. Aspiration is to generate the reports from the MDM/Snowflake solution.\n\nJun 11 2022: business runs reports from Banner at present. The integration at present loads data into Banner from slate. Slate constitient are not meant to go into MDM till they are accepted. Unique identifier are returned back to slate from banner post load into banner. \n\nIntegration Loads at present are: (1) Student application information is being loaded from slate into ODS (2) P2P Integration between various systems\nReport extracts at present: (1) sfaq into Snowflake ingestion for reporting (to be reviewed during 0B/phase 1)\n\nOpen questions: Why was the integration performed the way it was performed?is there a need to join slate and banner information. \n\nProposed flow: prospect from slate --> mdm. Banner information --> mdm. MDM cross reference information sent to snowflake providing the relationship to generate reports.\n\nUse cases:\n1 - New prospect in slate (s1) --> gets accepted --> loaded into banner (b1) --> unique id generated/loaded back into slate/sfaq/sf-stu --> mdm generated unique id (u1). --> alumni (w1). Snowflake record will be p1. U1 joins with banner, sfaq, workday in addition to the transactional data. The dimensional model will be including all these.\n\nReporting examples:\n- # of registration vs acceptance by time, state, race",
+      "combined_text": "solution shall replicate and eventually replace current slate integration into ods for reporting needs. (slate - transactional+customer+nmcustomer) with snowflake/azure pipeline. the integration from slate as a system will not send any data to mdm. sem - admissions is the group that runs reports. aspiration is to generate the reports from the mdm/snowflake solution.\n\njun 11 2022: business runs reports from banner at present. the integration at present loads data into banner from slate. slate constitient are not meant to go into mdm till they are accepted. unique identifier are returned back to slate from banner post load into banner. \n\nintegration loads at present are: (1) student application information is being loaded from slate into ods (2) p2p integration between various systems\nreport extracts at present: (1) sfaq into snowflake ingestion for reporting (to be reviewed during 0b/phase 1)\n\nopen questions: why was the integration performed the way it was performed?is there a need to join slate and banner information. \n\nproposed flow: prospect from slate --> mdm. banner information --> mdm. mdm cross reference information sent to snowflake providing the relationship to generate reports.\n\nuse cases:\n1 - new prospect in slate (s1) --> gets accepted --> loaded into banner (b1) --> unique id generated/loaded back into slate/sfaq/sf-stu --> mdm generated unique id (u1). --> alumni (w1). snowflake record will be p1. u1 joins with banner, sfaq, workday in addition to the transactional data. the dimensional model will be including all these.\n\nreporting examples:\n- # of registration vs acceptance by time, state, race"
+    },
+    {
+      "fr_number": "FR11",
+      "description": "Solution shall have ability to convert the source system models into galaxy datawarehousing schema in derived zone.",
+      "comments": "",
+      "combined_text": "solution shall have ability to convert the source system models into galaxy datawarehousing schema in derived zone. "
+    },
+    {
+      "fr_number": "FR12",
+      "description": "Solution shall have ability to replicate and eventually replace non-ODS data that reside in Ellucian Banner's ODS and move into Snowflake",
+      "comments": "",
+      "combined_text": "solution shall have ability to replicate and eventually replace non-ods data that reside in ellucian banner's ods and move into snowflake "
+    },
+    {
+      "fr_number": "FR13",
+      "description": "Solution shall have the ability to identify source system changes via an effective data capture approach for incremental loads.",
+      "comments": "",
+      "combined_text": "solution shall have the ability to identify source system changes via an effective data capture approach for incremental loads. "
+    },
+    {
+      "fr_number": "FR14",
+      "description": "Solution shall have ability to perform initial data load into MDM through the Snowflake/Azure pipeline.",
+      "comments": "",
+      "combined_text": "solution shall have ability to perform initial data load into mdm through the snowflake/azure pipeline. "
+    },
+    {
+      "fr_number": "FR15",
+      "description": "Solution shall have ability to identify unique primary key value for each Address record from each source system. That way updates to existing Address from source will not create a new record in the MDM.",
+      "comments": "8/16 - Question to address, shared with USF:  Is there a delete functionality for any of the Master and Transactional data?",
+      "combined_text": "solution shall have ability to identify unique primary key value for each address record from each source system. that way updates to existing address from source will not create a new record in the mdm. 8/16 - question to address, shared with usf:  is there a delete functionality for any of the master and transactional data?"
+    },
+    {
+      "fr_number": "FR16",
+      "description": "Solution shall have ability to identify unique value for each Phone record from each source system. That way updates to existing Phone from Source will not create a new Phone record in the MDM.",
+      "comments": "",
+      "combined_text": "solution shall have ability to identify unique value for each phone record from each source system. that way updates to existing phone from source will not create a new phone record in the mdm. "
+    },
+    {
+      "fr_number": "FR17",
+      "description": "Solution shall have ability to identify unique value for each Email record from each source system. That way updates to existing Email from Source will not create a new Email record in the MDM.",
+      "comments": "",
+      "combined_text": "solution shall have ability to identify unique value for each email record from each source system. that way updates to existing email from source will not create a new email record in the mdm. "
+    },
+    {
+      "fr_number": "FR18",
+      "description": "MDM shall have ability to accomodate multiple child records of a constituent that are originating from the source systems.",
+      "comments": "i.e. 1:Many phone, email, etc. \nLink: https://docs.google.com/spreadsheets/d/1YU8tz87nM-rXKhqjKBdlyGfMWjg2S_gu/edit?usp=sharing&ouid=114142719367202383342&rtpof=true&sd=true",
+      "combined_text": "mdm shall have ability to accomodate multiple child records of a constituent that are originating from the source systems. i.e. 1:many phone, email, etc. \nlink: https://docs.google.com/spreadsheets/d/1yu8tz87nm-rxkhqjkbdlygfmwjg2s_gu/edit?usp=sharing&ouid=114142719367202383342&rtpof=true&sd=true"
+    },
+    {
+      "fr_number": "FR19",
+      "description": "Solution shall have ability to display two types(Ex: Home, Work) each for Address, Email and Phone. Solution shall map one or more types from the source systems into a one type value in MDM. Ex: Address types LR, PR, MA from banner source system need to show up as of type 'Home' in MDM. Assumption: The mapping of types from source systems into pipeline/MDM will be finalized before design phase. Assumption: There can be more than one address or email or phone of same type.",
+      "comments": "Reference document that has crosswalk mappings: \nhttps://docs.google.com/spreadsheets/d/1w8V-sb6oOptz5hxri2ajlWb96Gxom_I59N-PxgrIiOo/edit?usp=sharing",
+      "combined_text": "solution shall have ability to display two types(ex: home, work) each for address, email and phone. solution shall map one or more types from the source systems into a one type value in mdm. ex: address types lr, pr, ma from banner source system need to show up as of type 'home' in mdm. assumption: the mapping of types from source systems into pipeline/mdm will be finalized before design phase. assumption: there can be more than one address or email or phone of same type. reference document that has crosswalk mappings: \nhttps://docs.google.com/spreadsheets/d/1w8v-sb6ooptz5hxri2ajlwb96gxom_i59n-pxgriioo/edit?usp=sharing"
+    },
+    {
+      "fr_number": "FR20",
+      "description": "Solution shall have the ability to uniquely identify addresses based on Reference 360 service crosswalk defined, the field values provided while associating the address to the constituent.",
+      "comments": "",
+      "combined_text": "solution shall have the ability to uniquely identify addresses based on reference 360 service crosswalk defined, the field values provided while associating the address to the constituent. "
+    },
+    {
+      "fr_number": "FR21",
+      "description": "While merging, MDM shall have ability to re-parent multiple unique child records of a constituent that are originating from the source systems as per active Constituent role/s. \n\nEx: Constituent golden record CG1 has two unique emails. Constituent golden record CG2 has three unqiue emails. CG1 and CG2 are matching and gets merged. Merged golden record MCG12 will have only unique emails. The fields that determine uniqueness on Address, Phone and email will be identified during solutioning/design phase.",
+      "comments": "1:M Use case: Duplcates found among the un-consolidated constituent records loaded into MDM. While merging, records get re-parented. \nSub use-cases: MDM merge: unique field in field group based, re-parenting\nde-duplication during the merge (in MDM, in pipeline)\nReference 360 crosswalks can be leveraged in all the options.\nNext steps: USF to update editable version of the architecture with options proposed, LD/USF to brainstorm and conclude 1:M cost effective/centralized requirements.\nProposed decision on Jun 30 2022 is to re-parent. Will connect back to finalize the decision at the right moment.",
+      "combined_text": "while merging, mdm shall have ability to re-parent multiple unique child records of a constituent that are originating from the source systems as per active constituent role/s. \n\nex: constituent golden record cg1 has two unique emails. constituent golden record cg2 has three unqiue emails. cg1 and cg2 are matching and gets merged. merged golden record mcg12 will have only unique emails. the fields that determine uniqueness on address, phone and email will be identified during solutioning/design phase. 1:m use case: duplcates found among the un-consolidated constituent records loaded into mdm. while merging, records get re-parented. \nsub use-cases: mdm merge: unique field in field group based, re-parenting\nde-duplication during the merge (in mdm, in pipeline)\nreference 360 crosswalks can be leveraged in all the options.\nnext steps: usf to update editable version of the architecture with options proposed, ld/usf to brainstorm and conclude 1:m cost effective/centralized requirements.\nproposed decision on jun 30 2022 is to re-parent. will connect back to finalize the decision at the right moment."
+    },
+    {
+      "fr_number": "FR22",
+      "description": "Solution shall have the ability to identify and survive golden Constituent entity values based on the primary role of matching constituents. Matching constituents will be originating from from different source systems. Each source system will have role information. Addresses and other relevant 1:M child entities to be pulled based on role information into the golden record.",
+      "comments": "Primary role hierarchy document: https://docs.google.com/spreadsheets/d/1w8V-sb6oOptz5hxri2ajlWb96Gxom_I59N-PxgrIiOo/edit#gid=619866497",
+      "combined_text": "solution shall have the ability to identify and survive golden constituent entity values based on the primary role of matching constituents. matching constituents will be originating from from different source systems. each source system will have role information. addresses and other relevant 1:m child entities to be pulled based on role information into the golden record. primary role hierarchy document: https://docs.google.com/spreadsheets/d/1w8v-sb6ooptz5hxri2ajlwb96gxom_i59n-pxgriioo/edit#gid=619866497"
+    },
+    {
+      "fr_number": "FR23",
+      "description": "Solution shall have the ability to survive a complete Constituent entity record of a source system wihout considering attributes from other systems. The surviving source system shall be determined by the primary role of the Constituent. Except 1:M child entities of the Constituent.",
+      "comments": "MDM Gap: MDM tool at present doesnt have the ability to survive a complete source record where source name determined at run time. Will be addressed by upstream pipeline processing by Snowflake/Azure per discussions among USF, Lumendata, Informatica.\n\nPrimary role hierarchy document: https://docs.google.com/spreadsheets/d/1w8V-sb6oOptz5hxri2ajlWb96Gxom_I59N-PxgrIiOo/edit#gid=619866497",
+      "combined_text": "solution shall have the ability to survive a complete constituent entity record of a source system wihout considering attributes from other systems. the surviving source system shall be determined by the primary role of the constituent. except 1:m child entities of the constituent. mdm gap: mdm tool at present doesnt have the ability to survive a complete source record where source name determined at run time. will be addressed by upstream pipeline processing by snowflake/azure per discussions among usf, lumendata, informatica.\n\nprimary role hierarchy document: https://docs.google.com/spreadsheets/d/1w8v-sb6ooptz5hxri2ajlwb96gxom_i59n-pxgriioo/edit#gid=619866497"
+    },
+    {
+      "fr_number": "FR24",
+      "description": "Solution shall have the ability to replace PIDM with CWID in the MDM User Interface. (In top left corner of the UI in MDM where the Constituent summary is made visible.)",
+      "comments": "",
+      "combined_text": "solution shall have the ability to replace pidm with cwid in the mdm user interface. (in top left corner of the ui in mdm where the constituent summary is made visible.) "
+    },
+    {
+      "fr_number": "FR25",
+      "description": "Display constituent types of each constituent in top left cornet of MDM UI.",
+      "comments": "Next steps: Merge and match results to be reviewed by USF and requirement to be finalized for reparenting vs keeping one in the golden record.",
+      "combined_text": "display constituent types of each constituent in top left cornet of mdm ui. next steps: merge and match results to be reviewed by usf and requirement to be finalized for reparenting vs keeping one in the golden record."
+    },
+    {
+      "fr_number": "FR26",
+      "description": "MDM shall have ability to create users with Read-Only access.",
+      "comments": "",
+      "combined_text": "mdm shall have ability to create users with read-only access. "
+    },
+    {
+      "fr_number": "FR27",
+      "description": "MDM shall have ability to provide access to Merge/Un-merge to selective IT team members.",
+      "comments": "",
+      "combined_text": "mdm shall have ability to provide access to merge/un-merge to selective it team members. "
+    },
+    {
+      "fr_number": "FR28",
+      "description": "Solution shall have the ability to exclude access to sensitive data elements from source extraction onwards. (within the Blob and downstream). In special cases of inclusion of sensitive data elements, access to be restricted to only users that have authorization to access them and will include data masking when needed.",
+      "comments": "8/16/22 - From workday, access will be restricted to the blob. Other sources, exclusion of sensitive data while extracting is feasible.\n8/10/22 review session notes: Ideally the sensitive data elements to be excluded from Ingestion into Blob/Snowflake/Blob/MDM. If not possible, then access controls per requirements to be in place.",
+      "combined_text": "solution shall have the ability to exclude access to sensitive data elements from source extraction onwards. (within the blob and downstream). in special cases of inclusion of sensitive data elements, access to be restricted to only users that have authorization to access them and will include data masking when needed. 8/16/22 - from workday, access will be restricted to the blob. other sources, exclusion of sensitive data while extracting is feasible.\n8/10/22 review session notes: ideally the sensitive data elements to be excluded from ingestion into blob/snowflake/blob/mdm. if not possible, then access controls per requirements to be in place."
+    },
+    {
+      "fr_number": "FR29",
+      "description": "Solution shall enable replacement and centralization of point to point integrations.",
+      "comments": "",
+      "combined_text": "solution shall enable replacement and centralization of point to point integrations. "
+    },
+    {
+      "fr_number": "FR30",
+      "description": "Solution shall have the ability to support reporting using custom SQLs.",
+      "comments": "",
+      "combined_text": "solution shall have the ability to support reporting using custom sqls. "
+    },
+    {
+      "fr_number": "FR31",
+      "description": "Solution shall have the ability to support synchronizing data with downstream systems.",
+      "comments": "",
+      "combined_text": "solution shall have the ability to support synchronizing data with downstream systems. "
+    },
+    {
+      "fr_number": "FR32",
+      "description": "Solution shall have a unified data model that supports reports from different systems.",
+      "comments": "",
+      "combined_text": "solution shall have a unified data model that supports reports from different systems. "
+    },
+    {
+      "fr_number": "FR33",
+      "description": "Solution shall have ability to identify union of information from target systems and create a canonical format. Solution shall have the ability to put that data in a common topic of an integration bus. Thereby providing ability to consume this data by relevant target systems in publish/subscribe model.",
+      "comments": "Reference document: https://docs.google.com/document/d/1TBnEy3aL_MiJLVio3C9pP3-U7f4Zqyf55EvXkSlK3Do/edit",
+      "combined_text": "solution shall have ability to identify union of information from target systems and create a canonical format. solution shall have the ability to put that data in a common topic of an integration bus. thereby providing ability to consume this data by relevant target systems in publish/subscribe model. reference document: https://docs.google.com/document/d/1tbney3al_mijlvio3c9pp3-u7f4zqyf55evxkslk3do/edit"
+    },
+    {
+      "fr_number": "FR34",
+      "description": "Solution shall have ability to update ServiceNow user profile with information from MDM Golden record/transactional information replacing the current integration at USF. This integration shall include the field Classification. Full time staff, Part time staff are examples of the field Classification.",
+      "comments": "Reference document: https://docs.google.com/document/d/1TBnEy3aL_MiJLVio3C9pP3-U7f4Zqyf55EvXkSlK3Do/edit",
+      "combined_text": "solution shall have ability to update servicenow user profile with information from mdm golden record/transactional information replacing the current integration at usf. this integration shall include the field classification. full time staff, part time staff are examples of the field classification. reference document: https://docs.google.com/document/d/1tbney3al_mijlvio3c9pp3-u7f4zqyf55evxkslk3do/edit"
+    },
+    {
+      "fr_number": "FR35",
+      "description": "Solution shall the ability to create ServiceNow ticket autmatically on job errors.",
+      "comments": "",
+      "combined_text": "solution shall the ability to create servicenow ticket autmatically on job errors. "
+    },
+    {
+      "fr_number": "FR36",
+      "description": "Solution shall have ability to send user profile information to SF-STU thereby addressing the challenges that current integration has at USF.",
+      "comments": "Reference document: https://docs.google.com/document/d/1TBnEy3aL_MiJLVio3C9pP3-U7f4Zqyf55EvXkSlK3Do/edit\n\nUse case document: \nhttps://docs.google.com/spreadsheets/d/1DvU5NcXpwUsJ8gcm802S1_5RtB8G5bBaF_Xc3M_T4EI/edit?usp=sharing",
+      "combined_text": "solution shall have ability to send user profile information to sf-stu thereby addressing the challenges that current integration has at usf. reference document: https://docs.google.com/document/d/1tbney3al_mijlvio3c9pp3-u7f4zqyf55evxkslk3do/edit\n\nuse case document: \nhttps://docs.google.com/spreadsheets/d/1dvu5ncxpwusj8gcm802s1_5rtb8g5bbaf_xc3m_t4ei/edit?usp=sharing"
+    },
+    {
+      "fr_number": "FR37",
+      "description": "Solution shall have ability to send user profile information to IAM thereby addressing the challenges that current integration has at USF.",
+      "comments": "Reference document: https://docs.google.com/document/d/1TBnEy3aL_MiJLVio3C9pP3-U7f4Zqyf55EvXkSlK3Do/edit\n\nUse case document: \nhttps://docs.google.com/spreadsheets/d/1DvU5NcXpwUsJ8gcm802S1_5RtB8G5bBaF_Xc3M_T4EI/edit?usp=sharing",
+      "combined_text": "solution shall have ability to send user profile information to iam thereby addressing the challenges that current integration has at usf. reference document: https://docs.google.com/document/d/1tbney3al_mijlvio3c9pp3-u7f4zqyf55evxkslk3do/edit\n\nuse case document: \nhttps://docs.google.com/spreadsheets/d/1dvu5ncxpwusj8gcm802s1_5rtb8g5bbaf_xc3m_t4ei/edit?usp=sharing"
+    },
+    {
+      "fr_number": "FR38",
+      "description": "Solution shall have ability to send user profile information to Slack. User profile information will contain relevant MDM Golden record/transactional information.",
+      "comments": "Reference document: https://docs.google.com/document/d/1TBnEy3aL_MiJLVio3C9pP3-U7f4Zqyf55EvXkSlK3Do/edit",
+      "combined_text": "solution shall have ability to send user profile information to slack. user profile information will contain relevant mdm golden record/transactional information. reference document: https://docs.google.com/document/d/1tbney3al_mijlvio3c9pp3-u7f4zqyf55evxkslk3do/edit"
+    },
+    {
+      "fr_number": "FR39",
+      "description": "Solution shall provide the same data that is provided at present by source API calls. These source API calls are used by business users via visualization tool reports. Ex: Currently business users are invoking Ellucian Banner APIs from Tableau reports. Post deployment of this solution, they shall lhave ability to get the information from the visualization tool itself instead of invoking source APIs.",
+      "comments": "8/4 - UDF/Materialized views/Snowflake queries as relevant to be leveraged to accelerate access to the necessary information.",
+      "combined_text": "solution shall provide the same data that is provided at present by source api calls. these source api calls are used by business users via visualization tool reports. ex: currently business users are invoking ellucian banner apis from tableau reports. post deployment of this solution, they shall lhave ability to get the information from the visualization tool itself instead of invoking source apis. 8/4 - udf/materialized views/snowflake queries as relevant to be leveraged to accelerate access to the necessary information."
+    },
+    {
+      "fr_number": "FR40",
+      "description": "Solution shall have ability to provide constituent information(C360 and some transactional information) as close to real-time as possible to IAM system. \n\nCurrently, there are three flows going into IAM system. (1) Realtime flow from Constituent registration (2) 30 minutes job from BEP (Banner Event Publisher) (3) Nightly backup process that augments information from rest of the source systems. Aspiration is to package all three flow information into the near-realtime integration.",
+      "comments": "8/4 - In parellel, Banner integration will be enhanced. Outcome of those efforts will need to be included into this integration.",
+      "combined_text": "solution shall have ability to provide constituent information(c360 and some transactional information) as close to real-time as possible to iam system. \n\ncurrently, there are three flows going into iam system. (1) realtime flow from constituent registration (2) 30 minutes job from bep (banner event publisher) (3) nightly backup process that augments information from rest of the source systems. aspiration is to package all three flow information into the near-realtime integration. 8/4 - in parellel, banner integration will be enhanced. outcome of those efforts will need to be included into this integration."
+    },
+    {
+      "fr_number": "FR41",
+      "description": "Solution shall have ability to share all the roles of Constituent with IAM system.",
+      "comments": "",
+      "combined_text": "solution shall have ability to share all the roles of constituent with iam system. "
+    },
+    {
+      "fr_number": "FR42",
+      "description": "Solution shall have ability to share removal/addition/update of the roles of Constituent with IAM system.",
+      "comments": "8/16 - RabitMQ functionality might be leveraged",
+      "combined_text": "solution shall have ability to share removal/addition/update of the roles of constituent with iam system. 8/16 - rabitmq functionality might be leveraged"
+    },
+    {
+      "fr_number": "FR43",
+      "description": "The information provided by MDM to IAM shall have ability to co-exist with the existing priority and logic with IAM system.",
+      "comments": "",
+      "combined_text": "the information provided by mdm to iam shall have ability to co-exist with the existing priority and logic with iam system. "
+    },
+    {
+      "fr_number": "FR44",
+      "description": "Solution shall have the ability to uniquely identify the lookup values to be displayed in MDM based on values coming in from source systems.",
+      "comments": "9/22: Chak - Added as per discussion with USF on Sep 22 2022. Solution approach: the solution should translate the source value to mdm value as per the mapping provided in the ref data sheet.",
+      "combined_text": "solution shall have the ability to uniquely identify the lookup values to be displayed in mdm based on values coming in from source systems. 9/22: chak - added as per discussion with usf on sep 22 2022. solution approach: the solution should translate the source value to mdm value as per the mapping provided in the ref data sheet."
+    },
+    {
+      "fr_number": "FR45",
+      "description": "Solution shall have ability to validate the data to not have the errors faced during earlier loads. That way it ensures they dont re-occur during the upcoming MDM dataload.",
+      "comments": "9/22: Chak - Added as per discussion with USF on Sep 22 2022. Example of errors faced earlier: Nation lookup values are not confirming to MDM values, file name not confirming to MDM expected name, Relationship values not confirming to MDM configured relationship names",
+      "combined_text": "solution shall have ability to validate the data to not have the errors faced during earlier loads. that way it ensures they dont re-occur during the upcoming mdm dataload. 9/22: chak - added as per discussion with usf on sep 22 2022. example of errors faced earlier: nation lookup values are not confirming to mdm values, file name not confirming to mdm expected name, relationship values not confirming to mdm configured relationship names"
+    }
+  ],
+  "business_entities": [
+    {
+      "name": "Constituent",
+      "type": "CustomFieldGroup",
+      "purpose": "MDM shall have ability to accomodate multiple child records of a constituent that are originating from the source systems. i.e. 1:Many phone, email, e..."
+    },
+    {
+      "name": "Address",
+      "type": "FieldGroup",
+      "purpose": "Solution shall implement cost effective, centralized standardization approach that standardizes addresses to an uniform format. Solution will leverage..."
+    },
+    {
+      "name": "Phone",
+      "type": "FieldGroup",
+      "purpose": "Solution shall implement cost effective, centralized standardization approach that standardizes phone numbers to an uniform format. Solution will leve..."
+    },
+    {
+      "name": "Email",
+      "type": "FieldGroup",
+      "purpose": "Solution shall have ability to identify unique value for each Email record from each source system. That way updates to existing Email from Source wil..."
+    },
+    {
+      "name": "Ex",
+      "type": "CustomFieldGroup",
+      "purpose": "Solution shall replicate and eventually replace current Slate integration into ODS for reporting needs. (Slate - transactional+customer+Nmcustomer) wi..."
+    },
+    {
+      "name": "Organization",
+      "type": "Organization",
+      "purpose": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spr..."
+    },
+    {
+      "name": "Person",
+      "type": "Person",
+      "purpose": "Solution shall have the ability to exclude access to sensitive data elements from source extraction onwards. (within the Blob and downstream). In spec..."
+    }
+  ],
+  "attributes": {
+    "Person": {
+      "standard": [
+        "FirstName",
+        "LastName",
+        "MiddleName",
+        "NamePrefix",
+        "NameSuffix",
+        "FullName",
+        "DateOfBirth",
+        "Gender",
+        "MaritalStatus",
+        "PreferredLanguage",
+        "DeceasedDate",
+        "DeceasedFlag"
+      ],
+      "custom": [
+        "Classification",
+        "Ein",
+        "Employmentstatus",
+        "Relationshiptype",
+        "Roletype",
+        "Status"
+      ],
+      "custom_with_fr": {
+        "Classification": [
+          "FR34"
+        ],
+        "Ein": [
+          "FR3",
+          "FR4",
+          "FR10"
+        ],
+        "Employmentstatus": [
+          "FR34"
+        ],
+        "Relationshiptype": [
+          "FR2",
+          "FR6",
+          "FR9",
+          "FR10",
+          "FR45"
+        ],
+        "Roletype": [
+          "FR21",
+          "FR22",
+          "FR23",
+          "FR41",
+          "FR42"
+        ],
+        "Status": [
+          "FR21"
+        ]
+      }
+    }
+  },
+  "relationships": [],
+  "roles": [
+    {
+      "name": "Prospect",
+      "purpose": "solution shall have the ability to pull data that feeds six  out of eleven current tableau reports r..."
+    },
+    {
+      "name": "Student",
+      "purpose": "solution shall replicate and eventually replace current slate integration into ods for reporting nee..."
+    },
+    {
+      "name": "Customer",
+      "purpose": "solution shall replicate and eventually replace current slate integration into ods for reporting nee..."
+    },
+    {
+      "name": "Alumni",
+      "purpose": "solution shall replicate and eventually replace current slate integration into ods for reporting nee..."
+    },
+    {
+      "name": "User",
+      "purpose": "solution shall have the ability to replace pidm with cwid in the mdm user interface. (in top left co..."
+    },
+    {
+      "name": "Member",
+      "purpose": "mdm shall have ability to provide access to merge/un-merge to selective it team members. nan..."
+    },
+    {
+      "name": "Staff",
+      "purpose": "solution shall have ability to update servicenow user profile with information from mdm golden recor..."
+    }
+  ],
+  "source_systems": [
+    {
+      "name": "Banner",
+      "connection": "JDBC",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "Workday",
+      "connection": "SOAP API",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "Slate",
+      "connection": "API",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "Salesforce",
+      "connection": "API",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "SFAQ",
+      "connection": "API",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "AffinaQuest",
+      "connection": "API",
+      "context": "Solution shall have the ability to pull data that feeds six  out of eleven current tableau reports referenced in the file: https://docs.google.com/spreadsheets/d/1EYI07gSrc4Hw9_pwxIGgVXPow7IrKaZW5qeEv"
+    },
+    {
+      "name": "SF-STU",
+      "connection": "API",
+      "context": "Solution shall replicate and eventually replace current Slate integration into ODS for reporting needs. (Slate - transactional+customer+Nmcustomer) with Snowflake/Azure pipeline. The integration from "
+    },
+    {
+      "name": "Snowflake",
+      "connection": "Database",
+      "context": "Solution shall replicate and eventually replace current Slate integration into ODS for reporting needs. (Slate - transactional+customer+Nmcustomer) with Snowflake/Azure pipeline. The integration from "
+    },
+    {
+      "name": "IAM",
+      "connection": "API",
+      "context": "Solution shall have ability to send user profile information to IAM thereby addressing the challenges that current integration has at USF.  Reference document: https://docs.google.com/document/d/1TBnE"
+    },
+    {
+      "name": "Slack",
+      "connection": "API",
+      "context": "Solution shall have ability to send user profile information to Slack. User profile information will contain relevant MDM Golden record/transactional information.  Reference document: https://docs.goo"
+    }
+  ],
+  "matching_rules": [
+    {
+      "rule": "Address matching",
+      "criteria": "Match based on standardized address components; may use a unique key from the source system or a composite of address fields."
+    },
+    {
+      "rule": "Phone matching",
+      "criteria": "Match on normalized phone number (country and area code); uniqueness may vary based on business requirements."
+    },
+    {
+      "rule": "Email matching",
+      "criteria": "Match on lowercased, trimmed email address; not always unique depending on real-world usage."
+    },
+    {
+      "rule": "Address crosswalk",
+      "criteria": "Use reference/crosswalk tables to link and translate between keys of source and master addresses."
+    }
+  ],
+  "data_quality_rules": [
+    {
+      "rule": "Address standardization",
+      "approach": "Centralized standardization to uniform format"
+    },
+    {
+      "rule": "Phone standardization",
+      "approach": "Centralized standardization to uniform format"
+    },
+    {
+      "rule": "Lookup value mapping",
+      "approach": "Map source values to MDM values via reference data"
+    }
+  ]
+}

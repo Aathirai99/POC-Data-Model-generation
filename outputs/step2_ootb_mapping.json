@@ -1,0 +1,157 @@
+{
+  "mapping_date": "2025-12-22T14:03:13.871517",
+  "entity_mappings": [
+    {
+      "requirement": "Unified MDM Entity",
+      "ootb_entity": "Person",
+      "justification": "Consolidated all requirements (Person, Organization) into single OOTB Person entity. Using OOTB entity to minimize customization and leverage standard MDM capabilities. Additional fields added as custom attributes only where OOTB fields cannot accommodate requirements and are justified by functional requirements.",
+      "ootb_fields_used": [
+        "FirstName",
+        "LastName",
+        "MiddleName",
+        "NamePrefix",
+        "NameSuffix",
+        "FullName",
+        "DateOfBirth",
+        "Gender",
+        "MaritalStatus",
+        "PreferredLanguage",
+        "DeceasedDate",
+        "DeceasedFlag"
+      ],
+      "custom_fields_needed": [
+        "Classification",
+        "Ein",
+        "Employmentstatus",
+        "Relationshiptype",
+        "Roletype",
+        "Status"
+      ],
+      "custom_fields_with_fr": {
+        "Classification": [
+          "FR34"
+        ],
+        "Ein": [
+          "FR3",
+          "FR4",
+          "FR10"
+        ],
+        "Employmentstatus": [
+          "FR34"
+        ],
+        "Relationshiptype": [
+          "FR2",
+          "FR6",
+          "FR9",
+          "FR10",
+          "FR45"
+        ],
+        "Roletype": [
+          "FR21",
+          "FR22",
+          "FR23",
+          "FR41",
+          "FR42"
+        ],
+        "Status": [
+          "FR21"
+        ]
+      },
+      "consolidated_requirements": [
+        "Person",
+        "Organization"
+      ]
+    }
+  ],
+  "field_group_mappings": [
+    {
+      "requirement": "Address field group",
+      "ootb_field_group": "Address",
+      "justification": "Solution shall implement cost effective, centralized standardization approach that standardizes addresses to an uniform format. Solution will leverage...",
+      "ootb_fields_used": [
+        "AddressLine1",
+        "AddressLine2",
+        "City",
+        "State",
+        "PostalCode",
+        "Country",
+        "AddressType",
+        "PrimaryFlag",
+        "StartDate",
+        "EndDate",
+        "County",
+        "Region",
+        "Latitude",
+        "Longitude"
+      ],
+      "custom_fields_needed": [
+        "SourceSystemKey"
+      ]
+    },
+    {
+      "requirement": "Phone field group",
+      "ootb_field_group": "Phone",
+      "justification": "Solution shall implement cost effective, centralized standardization approach that standardizes phone numbers to an uniform format. Solution will leve...",
+      "ootb_fields_used": [
+        "PhoneNumber",
+        "PhoneType",
+        "PrimaryFlag",
+        "CountryCode",
+        "AreaCode",
+        "Extension",
+        "StartDate",
+        "EndDate",
+        "DoNotCallFlag"
+      ],
+      "custom_fields_needed": [
+        "SourceSystemKey"
+      ]
+    },
+    {
+      "requirement": "Email field group",
+      "ootb_field_group": "Email",
+      "justification": "Solution shall have ability to identify unique value for each Email record from each source system. That way updates to existing Email from Source wil...",
+      "ootb_fields_used": [
+        "EmailAddress",
+        "EmailType",
+        "PrimaryFlag",
+        "StartDate",
+        "EndDate",
+        "DoNotEmailFlag",
+        "BounceFlag"
+      ],
+      "custom_fields_needed": [
+        "SourceSystemKey"
+      ]
+    }
+  ],
+  "gaps": [],
+  "custom_components": [
+    {
+      "type": "CustomFieldGroup",
+      "name": "Constituent",
+      "justification": "MDM shall have ability to accomodate multiple child records of a constituent that are originating from the source systems. i.e. 1:Many phone, email, e...",
+      "fields": [
+        "Type",
+        "Status",
+        "StartDate",
+        "EndDate",
+        "SourceSystem",
+        "SourceSystemKey"
+      ]
+    },
+    {
+      "type": "CustomFieldGroup",
+      "name": "Ex",
+      "justification": "Solution shall replicate and eventually replace current Slate integration into ODS for reporting needs. (Slate - transactional+customer+Nmcustomer) wi...",
+      "fields": [
+        "Type",
+        "Status",
+        "StartDate",
+        "EndDate",
+        "SourceSystem",
+        "SourceSystemKey"
+      ]
+    }
+  ]
+}

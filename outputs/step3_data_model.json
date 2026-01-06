@@ -1,0 +1,181 @@
+{
+  "model_date": "2025-12-22T14:03:13.871876",
+  "entities": [
+    {
+      "name": "Person",
+      "original_name": "Unified MDM Entity",
+      "type": "OOTB",
+      "purpose": "Unified canonical master entity consolidating all requirements (person and organization data) into single Person OOTB entity. This represents the complete MDM golden record structure.",
+      "identifiers": [
+        "PersonId",
+        "SSN",
+        "TaxID"
+      ],
+      "attributes": {
+        "ootb": [
+          "FirstName",
+          "LastName",
+          "MiddleName",
+          "NamePrefix",
+          "NameSuffix",
+          "FullName",
+          "DateOfBirth",
+          "Gender",
+          "MaritalStatus",
+          "PreferredLanguage",
+          "DeceasedDate",
+          "DeceasedFlag"
+        ],
+        "custom": [
+          "Classification",
+          "Ein",
+          "Employmentstatus",
+          "Relationshiptype",
+          "Roletype",
+          "Status"
+        ],
+        "custom_with_fr": {
+          "Classification": [
+            "FR34"
+          ],
+          "Ein": [
+            "FR3",
+            "FR4",
+            "FR10"
+          ],
+          "Employmentstatus": [
+            "FR34"
+          ],
+          "Relationshiptype": [
+            "FR2",
+            "FR6",
+            "FR9",
+            "FR10",
+            "FR45"
+          ],
+          "Roletype": [
+            "FR21",
+            "FR22",
+            "FR23",
+            "FR41",
+            "FR42"
+          ],
+          "Status": [
+            "FR21"
+          ]
+        }
+      },
+      "field_groups": [
+        {
+          "name": "Address",
+          "type": "OOTB",
+          "fields": {
+            "ootb": [
+              "AddressLine1",
+              "AddressLine2",
+              "City",
+              "State",
+              "PostalCode",
+              "Country",
+              "AddressType",
+              "PrimaryFlag",
+              "StartDate",
+              "EndDate",
+              "County",
+              "Region",
+              "Latitude",
+              "Longitude"
+            ],
+            "custom": [
+              "SourceSystemKey"
+            ]
+          }
+        },
+        {
+          "name": "Phone",
+          "type": "OOTB",
+          "fields": {
+            "ootb": [
+              "PhoneNumber",
+              "PhoneType",
+              "PrimaryFlag",
+              "CountryCode",
+              "AreaCode",
+              "Extension",
+              "StartDate",
+              "EndDate",
+              "DoNotCallFlag"
+            ],
+            "custom": [
+              "SourceSystemKey"
+            ]
+          }
+        },
+        {
+          "name": "Email",
+          "type": "OOTB",
+          "fields": {
+            "ootb": [
+              "EmailAddress",
+              "EmailType",
+              "PrimaryFlag",
+              "StartDate",
+              "EndDate",
+              "DoNotEmailFlag",
+              "BounceFlag"
+            ],
+            "custom": [
+              "SourceSystemKey"
+            ]
+          }
+        },
+        {
+          "name": "Identifier",
+          "type": "OOTB",
+          "fields": {
+            "ootb": [
+              "IdentifierValue",
+              "IdentifierType",
+              "PrimaryFlag",
+              "Issuer",
+              "StartDate",
+              "EndDate",
+              "VerificationStatus"
+            ],
+            "custom": [
+              "SourceSystemKey"
+            ]
+          }
+        },
+        {
+          "name": "Constituent",
+          "type": "Custom",
+          "fields": {
+            "custom": [
+              "Type",
+              "Status",
+              "StartDate",
+              "EndDate",
+              "SourceSystem",
+              "SourceSystemKey"
+            ]
+          }
+        },
+        {
+          "name": "Ex",
+          "type": "Custom",
+          "fields": {
+            "custom": [
+              "Type",
+              "Status",
+              "StartDate",
+              "EndDate",
+              "SourceSystem",
+              "SourceSystemKey"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

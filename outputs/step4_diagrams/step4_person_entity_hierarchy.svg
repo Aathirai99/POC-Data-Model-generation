@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="2566" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold" text-decoration="underline">
+    Person Entity Hierarchy
+  </text>
+  
+  <!-- Legend -->
+  <rect x="10" y="30" width="580" height="40" fill="#f0f0f0" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="20" y="50" font-family="Arial" font-size="10" font-weight="bold">Legend:</text>
+  <rect x="80" y="40" width="80" height="20" fill="#2196F3" stroke="#666" rx="3"/>
+  <text x="85" y="53" font-family="Arial" font-size="8" fill="white">Entity</text>
+  <rect x="170" y="40" width="80" height="20" fill="#C5E1A5" stroke="#666" rx="3"/>
+  <text x="175" y="53" font-family="Arial" font-size="8">Attributes</text>
+  <rect x="260" y="40" width="80" height="20" fill="#F8BBD9" stroke="#666" rx="3"/>
+  <text x="265" y="53" font-family="Arial" font-size="8">Identifiers</text>
+  <rect x="350" y="40" width="80" height="20" fill="#FFD54F" stroke="#666" rx="3"/>
+  <text x="355" y="53" font-family="Arial" font-size="8">Field Groups</text>
+  <rect x="440" y="40" width="80" height="20" fill="#E1BEE7" stroke="#666" rx="3"/>
+  <text x="445" y="53" font-family="Arial" font-size="8">Custom</text>
+  
+  <!-- Main Entity Box (Blue) -->
+  <rect x="20" y="80" width="155" height="26" fill="#2196F3" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="97.5" y="98" font-family="Arial" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Person</text>
+  <line x1="97.5" y1="106" x2="97.5" y2="2487.0" stroke="#666" stroke-width="1"/>
+  <line x1="97.5" y1="151.0" x2="220" y2="151.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="138" width="155" height="26" fill="#F8BBD9" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="155" font-family="Arial" font-size="10" text-anchor="middle">PersonId</text>
+  <line x1="97.5" y1="183.0" x2="220" y2="183.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="170" width="155" height="26" fill="#F8BBD9" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="187" font-family="Arial" font-size="10" text-anchor="middle">SSN</text>
+  <line x1="97.5" y1="215.0" x2="220" y2="215.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="202" width="155" height="26" fill="#F8BBD9" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="219" font-family="Arial" font-size="10" text-anchor="middle">TaxID</text>
+  <line x1="97.5" y1="247.0" x2="220" y2="247.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="234" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="251" font-family="Arial" font-size="10" text-anchor="middle">FirstName</text>
+  <line x1="97.5" y1="279.0" x2="220" y2="279.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="266" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="283" font-family="Arial" font-size="10" text-anchor="middle">LastName</text>
+  <line x1="97.5" y1="311.0" x2="220" y2="311.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="298" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="315" font-family="Arial" font-size="10" text-anchor="middle">MiddleName</text>
+  <line x1="97.5" y1="343.0" x2="220" y2="343.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="330" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="347" font-family="Arial" font-size="10" text-anchor="middle">NamePrefix</text>
+  <line x1="97.5" y1="375.0" x2="220" y2="375.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="362" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="379" font-family="Arial" font-size="10" text-anchor="middle">NameSuffix</text>
+  <line x1="97.5" y1="407.0" x2="220" y2="407.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="394" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="411" font-family="Arial" font-size="10" text-anchor="middle">FullName</text>
+  <line x1="97.5" y1="439.0" x2="220" y2="439.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="426" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="443" font-family="Arial" font-size="10" text-anchor="middle">DateOfBirth</text>
+  <line x1="97.5" y1="471.0" x2="220" y2="471.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="458" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="475" font-family="Arial" font-size="10" text-anchor="middle">Gender</text>
+  <text x="360" y="475" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="503.0" x2="220" y2="503.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="490" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="507" font-family="Arial" font-size="10" text-anchor="middle">MaritalStatus</text>
+  <text x="360" y="507" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="535.0" x2="220" y2="535.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="522" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="539" font-family="Arial" font-size="10" text-anchor="middle">PreferredLanguage</text>
+  <text x="360" y="539" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="567.0" x2="220" y2="567.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="554" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="571" font-family="Arial" font-size="10" text-anchor="middle">DeceasedDate</text>
+  <line x1="97.5" y1="599.0" x2="220" y2="599.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="586" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="603" font-family="Arial" font-size="10" text-anchor="middle">DeceasedFlag</text>
+  <text x="360" y="603" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="631.0" x2="220" y2="631.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="618" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="635" font-family="Arial" font-size="10" text-anchor="middle">Classification</text>
+  <text x="360" y="635" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="663.0" x2="220" y2="663.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="650" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="667" font-family="Arial" font-size="10" text-anchor="middle">Ein</text>
+  <line x1="97.5" y1="695.0" x2="220" y2="695.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="682" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="699" font-family="Arial" font-size="10" text-anchor="middle">Employmentstatus</text>
+  <text x="360" y="699" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="727.0" x2="220" y2="727.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="714" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="731" font-family="Arial" font-size="10" text-anchor="middle">Relationshiptype</text>
+  <text x="360" y="731" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="759.0" x2="220" y2="759.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="746" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="763" font-family="Arial" font-size="10" text-anchor="middle">Roletype</text>
+  <text x="360" y="763" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="791.0" x2="220" y2="791.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="778" width="155" height="26" fill="#E1BEE7" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="292.5" y="795" font-family="Arial" font-size="10" text-anchor="middle">Status</text>
+  <text x="360" y="795" font-family="Arial" font-size="9" fill="#666">▼</text>
+  <line x1="97.5" y1="823.0" x2="220" y2="823.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="810" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="827" font-family="Arial" font-size="9" text-anchor="middle">Address (OOTB)</text>
+  <line x1="375" y1="823.0" x2="390" y2="823.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="823.0" x2="390" y2="1271.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="823.0" x2="400" y2="823.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="810" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="827" font-family="Arial" font-size="9" text-anchor="middle">AddressLine1</text>
+  <line x1="390" y1="855.0" x2="400" y2="855.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="842" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="859" font-family="Arial" font-size="9" text-anchor="middle">AddressLine2</text>
+  <line x1="390" y1="887.0" x2="400" y2="887.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="874" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="891" font-family="Arial" font-size="9" text-anchor="middle">City</text>
+  <line x1="390" y1="919.0" x2="400" y2="919.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="906" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="923" font-family="Arial" font-size="9" text-anchor="middle">State</text>
+  <line x1="390" y1="951.0" x2="400" y2="951.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="938" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="955" font-family="Arial" font-size="9" text-anchor="middle">PostalCode</text>
+  <line x1="390" y1="983.0" x2="400" y2="983.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="970" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="987" font-family="Arial" font-size="9" text-anchor="middle">Country</text>
+  <line x1="390" y1="1015.0" x2="400" y2="1015.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1002" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1019" font-family="Arial" font-size="9" text-anchor="middle">AddressType</text>
+  <text x="543" y="1019" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1047.0" x2="400" y2="1047.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1034" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1051" font-family="Arial" font-size="9" text-anchor="middle">PrimaryFlag</text>
+  <text x="543" y="1051" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1079.0" x2="400" y2="1079.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1066" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1083" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="1111.0" x2="400" y2="1111.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1098" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1115" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="1143.0" x2="400" y2="1143.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1130" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1147" font-family="Arial" font-size="9" text-anchor="middle">County</text>
+  <line x1="390" y1="1175.0" x2="400" y2="1175.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1162" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1179" font-family="Arial" font-size="9" text-anchor="middle">Region</text>
+  <line x1="390" y1="1207.0" x2="400" y2="1207.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1194" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1211" font-family="Arial" font-size="9" text-anchor="middle">Latitude</text>
+  <line x1="390" y1="1239.0" x2="400" y2="1239.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1226" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1243" font-family="Arial" font-size="9" text-anchor="middle">Longitude</text>
+  <line x1="390" y1="1271.0" x2="400" y2="1271.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1258" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1275" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+  <line x1="97.5" y1="1303.0" x2="220" y2="1303.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="1290" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="1307" font-family="Arial" font-size="9" text-anchor="middle">Phone (OOTB)</text>
+  <line x1="375" y1="1303.0" x2="390" y2="1303.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1303.0" x2="390" y2="1591.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1303.0" x2="400" y2="1303.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1290" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1307" font-family="Arial" font-size="9" text-anchor="middle">PhoneNumber</text>
+  <line x1="390" y1="1335.0" x2="400" y2="1335.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1322" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1339" font-family="Arial" font-size="9" text-anchor="middle">PhoneType</text>
+  <text x="543" y="1339" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1367.0" x2="400" y2="1367.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1354" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1371" font-family="Arial" font-size="9" text-anchor="middle">PrimaryFlag</text>
+  <text x="543" y="1371" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1399.0" x2="400" y2="1399.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1386" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1403" font-family="Arial" font-size="9" text-anchor="middle">CountryCode</text>
+  <line x1="390" y1="1431.0" x2="400" y2="1431.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1418" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1435" font-family="Arial" font-size="9" text-anchor="middle">AreaCode</text>
+  <line x1="390" y1="1463.0" x2="400" y2="1463.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1450" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1467" font-family="Arial" font-size="9" text-anchor="middle">Extension</text>
+  <line x1="390" y1="1495.0" x2="400" y2="1495.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1482" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1499" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="1527.0" x2="400" y2="1527.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1514" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1531" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="1559.0" x2="400" y2="1559.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1546" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1563" font-family="Arial" font-size="9" text-anchor="middle">DoNotCallFlag</text>
+  <text x="543" y="1563" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1591.0" x2="400" y2="1591.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1578" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1595" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+  <line x1="97.5" y1="1623.0" x2="220" y2="1623.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="1610" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="1627" font-family="Arial" font-size="9" text-anchor="middle">Email (OOTB)</text>
+  <line x1="375" y1="1623.0" x2="390" y2="1623.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1623.0" x2="390" y2="1847.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1623.0" x2="400" y2="1623.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1610" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1627" font-family="Arial" font-size="9" text-anchor="middle">EmailAddress</text>
+  <line x1="390" y1="1655.0" x2="400" y2="1655.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1642" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1659" font-family="Arial" font-size="9" text-anchor="middle">EmailType</text>
+  <text x="543" y="1659" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1687.0" x2="400" y2="1687.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1674" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1691" font-family="Arial" font-size="9" text-anchor="middle">PrimaryFlag</text>
+  <text x="543" y="1691" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1719.0" x2="400" y2="1719.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1706" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1723" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="1751.0" x2="400" y2="1751.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1738" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1755" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="1783.0" x2="400" y2="1783.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1770" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1787" font-family="Arial" font-size="9" text-anchor="middle">DoNotEmailFlag</text>
+  <text x="543" y="1787" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1815.0" x2="400" y2="1815.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1802" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1819" font-family="Arial" font-size="9" text-anchor="middle">BounceFlag</text>
+  <text x="543" y="1819" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1847.0" x2="400" y2="1847.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1834" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1851" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+  <line x1="97.5" y1="1879.0" x2="220" y2="1879.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="1866" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="1883" font-family="Arial" font-size="9" text-anchor="middle">Identifier (OOTB)</text>
+  <line x1="375" y1="1879.0" x2="390" y2="1879.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1879.0" x2="390" y2="2103.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="1879.0" x2="400" y2="1879.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1866" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1883" font-family="Arial" font-size="9" text-anchor="middle">IdentifierValue</text>
+  <line x1="390" y1="1911.0" x2="400" y2="1911.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1898" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1915" font-family="Arial" font-size="9" text-anchor="middle">IdentifierType</text>
+  <text x="543" y="1915" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1943.0" x2="400" y2="1943.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1930" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="1947" font-family="Arial" font-size="9" text-anchor="middle">PrimaryFlag</text>
+  <text x="543" y="1947" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="1975.0" x2="400" y2="1975.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1962" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="1979" font-family="Arial" font-size="9" text-anchor="middle">Issuer</text>
+  <line x1="390" y1="2007.0" x2="400" y2="2007.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="1994" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2011" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="2039.0" x2="400" y2="2039.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2026" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2043" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="2071.0" x2="400" y2="2071.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2058" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="2075" font-family="Arial" font-size="9" text-anchor="middle">VerificationStatus</text>
+  <text x="543" y="2075" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="2103.0" x2="400" y2="2103.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2090" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2107" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+  <line x1="97.5" y1="2135.0" x2="220" y2="2135.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="2122" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="2139" font-family="Arial" font-size="9" text-anchor="middle">Constituent (Custom)</text>
+  <line x1="375" y1="2135.0" x2="390" y2="2135.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="2135.0" x2="390" y2="2295.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="2135.0" x2="400" y2="2135.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2122" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="2139" font-family="Arial" font-size="9" text-anchor="middle">Type</text>
+  <text x="543" y="2139" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="2167.0" x2="400" y2="2167.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2154" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="2171" font-family="Arial" font-size="9" text-anchor="middle">Status</text>
+  <text x="543" y="2171" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="2199.0" x2="400" y2="2199.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2186" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2203" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="2231.0" x2="400" y2="2231.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2218" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2235" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="2263.0" x2="400" y2="2263.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2250" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2267" font-family="Arial" font-size="9" text-anchor="middle">SourceSystem</text>
+  <line x1="390" y1="2295.0" x2="400" y2="2295.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2282" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2299" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+  <line x1="97.5" y1="2327.0" x2="220" y2="2327.0" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="2314" width="155" height="26" fill="#FFD54F" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="297.5" y="2331" font-family="Arial" font-size="9" text-anchor="middle">Ex (Custom)</text>
+  <line x1="375" y1="2327.0" x2="390" y2="2327.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="2327.0" x2="390" y2="2487.0" stroke="#666" stroke-width="1"/>
+  <line x1="390" y1="2327.0" x2="400" y2="2327.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2314" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="2331" font-family="Arial" font-size="9" text-anchor="middle">Type</text>
+  <text x="543" y="2331" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="2359.0" x2="400" y2="2359.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2346" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="472.5" y="2363" font-family="Arial" font-size="9" text-anchor="middle">Status</text>
+  <text x="543" y="2363" font-family="Arial" font-size="8" fill="#666">▼</text>
+  <line x1="390" y1="2391.0" x2="400" y2="2391.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2378" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2395" font-family="Arial" font-size="9" text-anchor="middle">StartDate</text>
+  <line x1="390" y1="2423.0" x2="400" y2="2423.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2410" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2427" font-family="Arial" font-size="9" text-anchor="middle">EndDate</text>
+  <line x1="390" y1="2455.0" x2="400" y2="2455.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2442" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2459" font-family="Arial" font-size="9" text-anchor="middle">SourceSystem</text>
+  <line x1="390" y1="2487.0" x2="400" y2="2487.0" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="2474" width="155" height="26" fill="#C5E1A5" stroke="#666" stroke-width="1" rx="12"/>
+  <text x="477.5" y="2491" font-family="Arial" font-size="9" text-anchor="middle">SourceSystemKey</text>
+</svg>
